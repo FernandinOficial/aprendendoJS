@@ -22,40 +22,67 @@ Com objetivo de estudar a lógica de programação para podermos utilizar em nos
 1 - Como definir uma váriavel.
   - Regras:
     . O nome de uma variável não deve conter espaços ou acentos
+
     . O nome de uma variável não deve conter operadores
+    
     . O nome de uma variável não deve ser só um número
+    
     . Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: Nome pode ser diferente de nome
-    . Variáveis cujo nome seja um substantivo composto, como "data de nascimento", podem ser nomeadas com o padrão camelCase: dataDeNascimento. Este padrão define que todas      as palavras após a primeira devem começar com letra maiúscula. Outra alternativa é utilizar um traço inferior (_), ou underline, entre cada palavra:           
+    
+    . Variáveis cujo nome seja um substantivo composto, como "data de nascimento", podem ser nomeadas com o padrão camelCase: dataDeNascimento. Este padrão define que todas
+    as palavras após a primeira devem começar com letra maiúscula. Outra alternativa é utilizar um traço inferior (_), ou underline, entre cada palavra:           
     data_de_nascimento.
 
 . Atribuir valores dentro de alguma variável: 
   a = 5;
+  
   nome = "João";
 
 . Tipos de variáveis:
   . Inteiro (integer): número inteiro. Ex.: 10 ou 50.
+  
   . Real (float): número real. Ex.: 10.5 ou 0.8.
-  . Caractere (character): uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: 'A' ou '2' ou '$'. Valores do tipo caractere geralmente são representados      entre aspas simples ('').
+  
+  . Caractere (character): uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: 'A' ou '2' ou '$'. Valores do tipo caractere geralmente são representados
+  entre aspas simples ('').
+  
   . Cadeia (string): números, letras, palavras, frases e/ou outros símbolos. Ex.: "A" ou "abc123" ou "* é um asterisco.". Valores do tipo cadeia geralmente são representados 
   entre aspas duplas (""); embora em JavaScript se possa utilizar também aspas simples ('').
+  
   . Lógico (boolean): verdadeiro ou falso (true e false em JavaScript).
 
 - Exercícios:
   1. Informe o tipo de variável adequado para cada item abaixo:
 
     a) Idade de uma pessoa
+  
       R:
+  
     b) Valor de uma conta de luz
+  
       R:
+  
     c) Nome de um cliente
+  
       R:
+  
     d) Estado de uma lâmpada (acesa/apagada)
+
       R:
+  
     e) Senha de acesso ao Facebook
+  
       R:
+  
     f) Quantidade de litros de combustível abastecidos em um posto
+  
       R:
+  
     g) Situação de uma determinada fatura (paga/não paga)
+  
       R:
+  
     h) Média final de um aluno
+  
       R:
+  

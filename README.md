@@ -56,33 +56,58 @@ Com objetivo de estudar a lógica de programação para podermos utilizar em nos
 
     a) Idade de uma pessoa
   
-      R:
+      R: idade = 10;
   
     b) Valor de uma conta de luz
   
-      R:
+      R: contaLuz = 400.00;
   
     c) Nome de um cliente
   
-      R:
+      R: Cliente = "Fernando Ribeiro";
   
     d) Estado de uma lâmpada (acesa/apagada)
 
-      R:
+      R: lamp = true;
   
     e) Senha de acesso ao Facebook
   
-      R:
+      R: senhaFacebook = 12345678;
   
     f) Quantidade de litros de combustível abastecidos em um posto
   
-      R:
+      R: litrosAbastecidos = 10;
   
     g) Situação de uma determinada fatura (paga/não paga)
   
-      R:
+      R: fatura = "paga";
   
     h) Média final de um aluno
   
-      R:
+      R: MediaFinal = 8;
   
+  2 - Existem vários tipos de operadores lógicos de matemática:
+    2.1 Operadores Aritméticos
+  
+        Soma (+): 1 + 3
+        Subtração (-): 5 – 4
+        Multiplicação (*): 8 * 8
+        Divisão (/): 40 / 5
+        Resto/Módulo (%): 20 % 3
+        Potenciação (**): 2 ** 2
+    2.2 Operadores Relacionais
+  
+        Igual (==): 5 == 5
+        Diferente (!=): 8 != 80
+        Maior que (>): 12 > 11
+        Menor que (<): 11 < 12
+        Maior ou igual (>=): 18 >= 17
+        Menor ou igual (<=): 16 <= 16
+    2.3 Operadores Lógicos
+  
+        E/Conjunção (&&): 5 == 5 && 9 > 7
+        Ou/Disjunção (||): 5 > 3 || 7 >= 1
+        Não/Negação (!): !(3 > 2) == false
+
+  3 - Tipos Bool ou chamados Booleanos
+        São literalmente verdadeiro ou falso, true ou false.

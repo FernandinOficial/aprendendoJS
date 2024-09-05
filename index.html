@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css" />
     <script src="script/script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <button onclick="refresh()">Resetar Página</button>
     <button onclick="soma()">Soma</button>
     <button onclick="escreverPagina()">Escrever na página</button>
     <button onclick="limparConsole()">Limpar Console</button>
     <button onmouseenter="trocarCor()">Trocar Cor Página</button>
 
-    <br>
-    <img onmouseenter="acender()" onclick="quebrar()" id="lampada" src="img/lampada-apagada.jpg" alt="Lampada Apagada">
-    <br>
+    <br />
+    <img onclick="quebrar()" onmouseenter="acender()" onmouseout="apagar()" id="lampada" src="img/lampada-apagada.jpg" alt="Lampada Apagada" />
+    <br />
 
-</body>
+    <script>
+    
+    </script>
+  </body>
 </html>

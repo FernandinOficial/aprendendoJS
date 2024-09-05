@@ -32,24 +32,31 @@ function trocarCor() {
 }
 
 //LAMPADA ACESA, APAGADA e QUEBRADA
+const lampada = document.getElementById("lampada");
+let lampadaQuebrada = false;  //inicia como falsa
+
+//FUNÇÕES
+function acender() {
+  //verifica se é nao falso = true
+
+  if (!lampadaQuebrada) {
+    console.log("acender"); //console.log so para teste
+    document.getElementById("lampada").src = "img/lampada-acesa.jpg"; //o documento pelo id vai receber uma imagem com o parametro .src
+  }
+}
+function apagar(){
+  if(!lampadaQuebrada){
+    console.log("apagar");
+    document.getElementById("lampada").src = "img/lampada-apagada.jpg";
+  }
+}
 function quebrar() {
-  var lampada = document.getElementById("lampada");
+  lampadaQuebrada = true; //vai fazer com que as outras verificações não seja executadas
+  console.log("quebrar");
   document.getElementById("lampada").src = "img/lampada-quebrada.jpg";
-  var lampada = document.getElementById("lampada");
 }
 
-function acender(){
-    var lampada = document.getElementById("lampada");
-
-    if(lampada == "img/lampada-apagada.jpg"){
-        document.getElementById("lampada").src = "img/lampada-acesa.jpg";
-    }
-}
-
-// if (lampada.src == "img/lampada-apagada.jpg") {
-//   console.log("acender");
-//   document.getElementById("lampada").src = "img/lampada-acesa.jpg";
-// } else {
-//   console.log("Quebrado");
-//   document.getElementById("lampada").src = "img/lampada-quebrada.jpg";
-// }
+// //eventos
+// lampada.addEventListener('mouseenter', acender());
+// lampada.addEventListener('mouseleave', acender());
+// lampada.addEventListener('click', quebrar());

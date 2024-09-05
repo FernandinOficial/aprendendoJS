@@ -56,7 +56,13 @@ function quebrar() {
   document.getElementById("lampada").src = "img/lampada-quebrada.jpg";
 }
 
-// //eventos
-// lampada.addEventListener('mouseenter', acender());
-// lampada.addEventListener('mouseleave', acender());
-// lampada.addEventListener('click', quebrar());
+//desafio 1 Gustavo Guanabara
+function botao1(){
+  alert("Você clicou no 1° botão!");
+}
+function botao2(){
+  alert("Você clicou no 2° botão!");
+}
+function botao3(){
+  alert("Você clicou no 3° botão!");
+}

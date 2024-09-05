@@ -66,3 +66,13 @@ function botao2(){
 function botao3(){
   alert("Você clicou no 3° botão!");
 }
+
+//desafio 2
+function form1(){
+  var nome, idade;
+   
+  nome = prompt("Digite seu nome:");
+  idade = Number(prompt("Olá " + nome + "! Quantos anos você tem?"));
+
+  alert("Prazer em conhecer você " + nome + ", um passarinho disse que tu tem " + idade + " anos de idade ! uau");
+}

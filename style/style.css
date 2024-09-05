@@ -16,3 +16,6 @@ button:hover {
     transition: 500ms;
     background-color: rgb(29, 161, 29);
 }
+h1 {
+    font-size: 30px;
+}

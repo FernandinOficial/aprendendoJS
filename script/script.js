@@ -76,3 +76,37 @@ function form1(){
 
   alert("Prazer em conhecer você " + nome + ", um passarinho disse que tu tem " + idade + " anos de idade ! uau");
 }
+
+//desafio 3
+function antesEdepois(){
+  let valor, valorAnt, valorSuc;
+
+  valor = Number(prompt("Digite um valor:"));
+
+  //calculo
+  valorAnt = valor - 1;
+  valorSuc = valor + 1;
+
+  alert("Antes de " + valor + ", temos o número " + valorAnt + "\nDepois de " + valor + ", temos o número " + valorSuc);
+}
+
+//desafio 4
+function loja(){
+  var produto, valor, pagamento, troco;
+
+  produto = prompt("Qual produto deseja comprar?");
+  valor = Number(prompt("Valor do produto:"));
+  pagamento = Number(prompt("Dinheiro entregue ao caixa:"));
+
+  troco = pagamento - valor;
+
+  if(troco > 0){
+    alert("Você comprou "+ produto + " no valor de R$"+ valor +",00. \nEntregou R$"+ pagamento +",00 em dinheiro. \nTroco: R$"+ troco);
+  }
+  else{
+    console.log("! CALOTEIRO !");
+    alert("Faltou dinheiro ae patrão ~_-")
+  }
+}
+
+//desafio 5

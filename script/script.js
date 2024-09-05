@@ -100,8 +100,8 @@ function loja(){
 
   troco = pagamento - valor;
 
-  if(troco > 0){
-    alert("Você comprou "+ produto + " no valor de R$"+ valor +",00. \nEntregou R$"+ pagamento +",00 em dinheiro. \nTroco: R$"+ troco);
+  if(troco >= 0){
+    alert("Você comprou "+ produto + " no valor de R$"+ valor +",00. \nEntregou R$"+ pagamento +",00 em dinheiro. \nTroco: R$"+ troco +",00");
   }
   else{
     console.log("! CALOTEIRO !");

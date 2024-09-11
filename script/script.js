@@ -221,3 +221,18 @@ function reajuste(){
 
   document.getElementById("valoresReaj").innerHTML = valores;
 }
+
+//desafio 10
+function Bhaskara(){
+  var calculo, valores, a, b, c, delta;
+
+  a = Number(prompt("Digite valor A"));
+  b = Number(prompt("Digite valor B"));
+  c = Number(prompt("Digite valor C"));
+
+  document.getElementById("valoresBhaskara").innerText = `Coloque os valores: ${a}x² + ${b}x + ${c} = 0`;   //substituir o texto
+
+  //calculo
+  delta = (b ** 2) - 4 * a * c;
+  console.log(delta);
+}

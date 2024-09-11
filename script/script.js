@@ -197,13 +197,27 @@ function desconto(){
 
   var valores = `<strong>LOJA</strong><br>
                   Produto ${produto}<br>
-                  Preço (${produto}): ${preco},00<br>
-                  Desconto 10%: ${desconto},00`;
+                  Preço (${produto}): ${preco}<br>
+                  Desconto 10%: ${desconto}`;
 
-  document.getElementById("valores").innerHTML = valores;
+  document.getElementById("valoresDesc").innerHTML = valores;
 }
 
 //desafio 9
 function reajuste(){
-  
+  var valores, funcionario, salario, PerCentReajuste, salPerCent, salarioFinal;
+
+  funcionario = prompt("Qual é o nome do funcionário?");
+  salario = Number(prompt(`Qual é o salário de ${funcionario}?`));
+  PerCentReajuste = Number(prompt(`O salário de ${funcionario} vai ser rajustado mês que vem em qual porcentagem? Ex: 2%, 5%, 10%`));
+
+  salPerCent = salario * (PerCentReajuste/100);
+  salarioFinal = salario + salPerCent;
+
+  var valores = `<strong>REAJUSTE de ${funcionario}</strong><br>
+                  Salário Atual: ${salario}<br>
+                  Reajuste de ${PerCentReajuste}%, salário vai ser aumentado R$ ${salPerCent} no próximo mês.<br>
+                  Salário Final: R$ ${salarioFinal}`;
+
+  document.getElementById("valoresReaj").innerHTML = valores;
 }

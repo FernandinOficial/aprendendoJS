@@ -167,7 +167,7 @@ const URL = `https://api.exchangerate-api.com/v4/latest/BRL`; // URL da API para
 async function atualizarConversao() {
     const valorReal = parseFloat(document.getElementById('valorReal').value);
     if (isNaN(valorReal) || valorReal <= 0) {
-        document.getElementById('resultado').innerText = 'Conversão: $0.00';
+        document.getElementById('resultado').innerText = 'Conversão Dolar: $0.00';
         return;
     }
 
@@ -176,7 +176,7 @@ async function atualizarConversao() {
         const data = await response.json();
         
         //se alterar o data.rates.USD o "USD" pela moeda desejada, vai alterar a conversão
-            let taxaDeCambio = data.rates.${valorUSD};
+            let taxaDeCambio = data.rates.USD;
             let valorDolar = valorReal * taxaDeCambio;
             document.getElementById('resultado').innerText = `Conversão Dolar: $${valorDolar.toFixed(2)}`;
     } catch (error) {
@@ -184,6 +184,26 @@ async function atualizarConversao() {
         document.getElementById('resultado').innerText = 'Erro ao obter a taxa de câmbio.';
     }
 }
-function brl(){
-  let taxaDeCambio = data.rates.BRL;
+
+//desafio 8
+function desconto(){
+  var valores, produto, preco, desconto;
+
+  produto = prompt("Qual produto você está comprando?");
+  preco = Number(prompt(`Qual é o preço do produto ${produto}?`));
+
+  desconto = preco * 0.1;
+  desconto = preco - desconto;
+
+  var valores = `<strong>LOJA</strong><br>
+                  Produto ${produto}<br>
+                  Preço (${produto}): ${preco},00<br>
+                  Desconto 10%: ${desconto},00`;
+
+  document.getElementById("valores").innerHTML = valores;
+}
+
+//desafio 9
+function reajuste(){
+  
 }

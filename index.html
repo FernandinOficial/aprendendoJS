@@ -35,8 +35,26 @@
 <h1>Loja</h1>
     <button onclick="loja()">Comprar</button>
 <hr>
-<h1>Conversor</h1>
-    <button>Converter Valor</button>
+<h1>Conversor DISTÂNCIA</h1>
+    <button onclick="converterDist()">Converter Valor</button>
+    <p id="valoresDist"></p>
 <hr>
+<h1>Conversor TEMPERATURA</h1>
+    <button onclick="converterTemp()">Converter Valor</button>
+    <p id="valoresTemp"></p>
+<hr>
+<h1>Conversor REAL</h1>
+    <button onclick="converterReal()">Converter Valor</button>
+    <p id="valoresReal"></p>
+<hr>
+<h1>Conversão de Moeda</h1>
+    <label for="valorReal">Valor em Real (BRL):</label>
+    <input type="number" id="valorReal" oninput="atualizarConversao()" placeholder="Digite o valor em BRL">
+    <p id="resultado">Conversão Dolar: $0.00</p>
+        <button onclick="brl()">USD</button>
+        <button onclick="BRL()">BRL</button>
+        <button>CAD</button>
+<hr>
+
 </body>
 </html>

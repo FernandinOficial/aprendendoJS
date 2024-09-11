@@ -1,3 +1,4 @@
+
 //comandos básicos em JS
 function refresh() {
   location.reload();
@@ -110,3 +111,79 @@ function loja(){
 }
 
 //desafio 5
+function converterDist(){
+  var valores, metros, km, hm, dam, dm, cm, mm;
+
+  metros = Number(prompt("Digite uma distância em metros (m):"))
+
+  km = metros / 1000;
+  hm = metros / 100;
+  dam = metros / 10;
+  dm = metros * 10;
+  cm = metros * 100;
+  mm = metros * 1000;
+
+  //teste
+  console.log(km)
+  console.log(hm)
+  console.log(dam)
+  console.log(dm)
+  console.log(cm)
+  console.log(mm)
+
+  var valores = `<strong>Conversão ${metros} metros:</strong><br><br>
+                  Quilometros: ${km} km<br>
+                  Hectômetros: ${hm} hm<br>
+                  Decâmetros: ${dam} dam<br>
+                  Decimetros: ${dm} dm<br>
+                  Centímetros: ${cm} cm<br>
+                  Milímetros: ${mm} mm<br>`;
+  document.getElementById("valoresDist").innerHTML = valores;
+}
+
+//desafio 6
+function converterTemp(){
+  var valores, Celsius, Faren, Kelv;
+
+  Celsius = Number(prompt("Digite uma temperatura em °C (Celsius):"))
+
+  Faren = (Celsius * 1.8) + 32;
+  Kelv = Celsius + 273.15;
+
+  console.log(Faren);
+  console.log(Kelv);
+
+  var valores = `<strong>Conversão ${Celsius} °C:</strong><br>
+                  Farenheit: ${Faren} °F<br>
+                  Kelvin:    ${Kelv}   K`;
+
+  document.getElementById("valoresTemp").innerHTML = valores;
+}
+
+//desafio 7
+const URL = `https://api.exchangerate-api.com/v4/latest/BRL`; // URL da API para obter a taxa de câmbio
+
+// Função para atualizar a conversão em tempo real
+async function atualizarConversao() {
+    const valorReal = parseFloat(document.getElementById('valorReal').value);
+    if (isNaN(valorReal) || valorReal <= 0) {
+        document.getElementById('resultado').innerText = 'Conversão: $0.00';
+        return;
+    }
+
+    try {
+        const response = await fetch(URL);
+        const data = await response.json();
+        
+        //se alterar o data.rates.USD o "USD" pela moeda desejada, vai alterar a conversão
+            let taxaDeCambio = data.rates.${valorUSD};
+            let valorDolar = valorReal * taxaDeCambio;
+            document.getElementById('resultado').innerText = `Conversão Dolar: $${valorDolar.toFixed(2)}`;
+    } catch (error) {
+        console.error('Erro:', error);
+        document.getElementById('resultado').innerText = 'Erro ao obter a taxa de câmbio.';
+    }
+}
+function brl(){
+  let taxaDeCambio = data.rates.BRL;
+}

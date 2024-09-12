@@ -19,3 +19,15 @@ button:hover {
 h1 {
     font-size: 30px;
 }
+.noBi{
+    background-color: rgb(172, 15, 15);
+    width: max-content;
+    font-size: 20px;
+    color: rgb(228, 141, 141);
+}
+.yeBi{
+    background-color: rgb(10, 133, 10);
+    width: max-content;
+    font-size: 20px;
+    color: rgb(189, 233, 189);
+}

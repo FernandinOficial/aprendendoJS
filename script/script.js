@@ -230,9 +230,76 @@ function Bhaskara(){
   b = Number(prompt("Digite valor B"));
   c = Number(prompt("Digite valor C"));
 
-  document.getElementById("valoresBhaskara").innerText = `Coloque os valores: ${a}x² + ${b}x + ${c} = 0`;   //substituir o texto
+  document.getElementById("valoresBhaskara").innerText = `Coloque os valores: ${a}x² + ${b}x + ${c} = 0.`;   //substituir o texto
 
   //calculo
   delta = (b ** 2) - 4 * a * c;
   console.log(delta);
+
+  valores = `O valor de Delta: <strong>Δ = ${delta}.</strong>`;
+
+  document.getElementById("calculoBhaskara").innerHTML = valores;
+}
+
+//desafio 11
+function bissexto(){
+  var valores, ano, noBi, yeBi;
+
+  noBi = `<p class="noBi">NÃO É BISSEXTO ❌</p>`;
+  yeBi = `<p class="yeBi">É BISSEXTO ✔</p>`;
+
+  ano = Number(prompt("Qual ano deseja verificar?"));
+
+  if(ano % 4 == 0){
+    document.getElementById("container").innerHTML = yeBi;
+  }else{
+    document.getElementById("container").innerHTML = noBi;
+  }
+  
+  valores = `<h1>Analizando o ano de ${ano} </h1>`;
+  document.getElementById("header").innerHTML = valores;
+}
+
+//desafio 12
+function alteracao(){
+  var valores, precoAtual, precoAnterior, diferenca, percent;
+  
+  precoAnterior = Number(prompt("Digite o valor anterior do produto:"));
+  precoAtual = Number(prompt("Digite o valor atual do produto:"));
+
+  diferenca =  precoAtual - precoAnterior;
+  percent = (diferenca / precoAnterior) * 100;
+
+  precoAnterior = formatarMoeda(precoAnterior);
+  precoAtual = formatarMoeda(precoAtual);
+  diferenca = formatarMoeda(Math.abs(diferenca)); //nao deixar numero negativo
+  percent = Math.abs(percent.toFixed(2)); // Duas casas decimais para a porcentagem
+  
+  if(diferenca > 0){
+      valores = `<h1>Analisando os valores informados<h1>
+        <p>O produto custava R$ ${precoAnterior}, atualmente custa R$ ${precoAtual}.<br>
+        O preço subiu R$ ${diferenca} em relação ao preço anterior.<br>
+        Uma variação de ${percent}% pra cima.</p>`;
+  }else if(diferenca < 0){
+      valores = `<h1>Analisando os valores informados<h1>
+        <p>O produto custava R$ ${precoAnterior}, atualmente custa R$ ${precoAtual}.<br>
+        O preço caiu R$ ${diferenca} em relação ao preço anterior.<br>
+        Uma variação de ${percent}% pra baixo.</p>`;
+  }else{
+      valores = `<h1>Analisando os valores informados<h1>
+        <p>O produto custava R$ ${precoAnterior}, atualmente custa R$ ${precoAtual}.<br>
+        O preço manteve R$ ${diferenca} em relação ao preço anterior.<br>
+        Uma variação de ${percent}%.</p>
+        <p>Não teve alterações.</p>`;
+  }
+  document.getElementById("containerAlteracao").innerHTML = valores;
+}
+
+function formatarMoeda(valor) {
+    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+//desafio 13
+function situacao(){
+
 }

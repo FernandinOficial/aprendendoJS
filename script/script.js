@@ -301,5 +301,19 @@ function formatarMoeda(valor) {
 
 //desafio 13
 function situacao(){
+  var aluno, media, nota1, nota2;
 
+  aluno = prompt("Digite o nome do aluno(a):");
+  nota1 = Number(prompt(`Primeira nota [${aluno}]:`));
+  nota2 = Number(prompt(`Segunda nota [${aluno}]:`));
+
+  media = (nota1 + nota2) / 2;
+
+  if(media > 6){
+    aprovado
+  }else if(media >= 3 && media <= 6){
+    recuperaçao
+  }else{
+    reprovado
+  }
 }

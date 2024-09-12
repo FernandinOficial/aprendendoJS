@@ -31,3 +31,9 @@ h1 {
     font-size: 20px;
     color: rgb(189, 233, 189);
 }
+.recuperacao{
+    background-color: rgba(177, 160, 14, 0.24);
+    width: max-content;
+    font-size: 20px;
+    color: rgb(212, 150, 15);
+}

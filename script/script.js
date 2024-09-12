@@ -307,13 +307,20 @@ function situacao(){
   nota1 = Number(prompt(`Primeira nota [${aluno}]:`));
   nota2 = Number(prompt(`Segunda nota [${aluno}]:`));
 
+  //calculo
   media = (nota1 + nota2) / 2;
 
+if(nota1 >= 0 && nota2 >= 0){
   if(media > 6){
-    aprovado
+    valores = `<p>Média: ${media}</p><p class="yeBi">APROVADO</p>`;
   }else if(media >= 3 && media <= 6){
-    recuperaçao
+    valores = `<p>Média: ${media}</p><p class="recuperacao">RECUPERAÇÃO</p>`;
   }else{
-    reprovado
+    valores = `<p>Média: ${media}</p><p class="noBi">REPROVADO</p>`;
   }
+}
+else{
+  valores = `<h1>Insira notas que não são negativas</h1>`;
+}
+  document.getElementById("containerSituacao").innerHTML = valores;
 }

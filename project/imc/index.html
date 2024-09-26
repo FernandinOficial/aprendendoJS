@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form id="form">
+        <div class="form-header">
+            <h1>Calculadora - IMC</h1>
+            <hr>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <th>
+                    <label for="name">Nome:</label>
+                </th>
+                <td>
+                    <input id="name" class="input-default" placeholder="Gustavo" type="text" required><br><br>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="height">Altura:</label>
+                </th>
+                <td>
+                    <input id="height" class="input-default" placeholder="1.70 metros" type="number"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="weight">Peso:</label>
+                </th>
+                <td>
+                    <input id="weight" class="input-default" placeholder="60 quilos" type="number"><br><br>
+                </td>
+            </tr>
+        </table>
+
+        <button id="submit" onclick="calcular()">Calcular</button><br><br>
+
+        <div class="result-container">
+            <div id="result-text">
+            </div>
+        </div>
+        <br>
+        <button id="clear" type="reset" onclick="console.clear();document.getElementById('result-text').innerHTML = '';">Limpar</button>
+        <br><br><br>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

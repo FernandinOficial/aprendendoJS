@@ -30,6 +30,7 @@ table th{
     height: 40px;
     border: none;
     border-radius: 10px;
+    box-shadow: 3px 3px #000;
 }
 .input-default{
     padding-left: 10px;
@@ -43,8 +44,9 @@ table th{
     cursor: pointer;
     width: 250px;
     height: 45px;
+    border: none;
     border-radius: 8px;
-    box-shadow: 5px 5px #6e5606;
+    box-shadow: 5px 5px #473808;
 }
 #submit:hover{
     transition: 200ms;
@@ -76,9 +78,11 @@ table th{
     text-align: start;
 }
 #result-text {
+    display: none;
     background-color: black;
     color: #FFF;
     padding: 20px;
+    padding-bottom: 40px;
     width: 210px;
     height: 100px;
     border-radius: 10px;

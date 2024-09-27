@@ -11,6 +11,18 @@
   margin-bottom: 30px;
   width: 100dvw;
 }
+#display {
+    display: none;
+    position: absolute;
+    background-color: rgb(11, 11, 11);
+    color: #fff;
+    font-size: 40px;
+    padding: 20px;
+    padding-right: 80px;
+    padding-left: 80px;
+    margin-top: 50px;
+    border-radius: 0px 30px 30px 0px;
+}
 .semaforo {
   background-color: rgb(11, 11, 11);
   width: max-content;
@@ -62,11 +74,11 @@ button:hover {
   );
 }
 #red-button {
-    background-color: #6e0a0a;
+  background-color: #6e0a0a;
 }
 #yellow-button {
-    background-color: #87870f;
+  background-color: #87870f;
 }
 #green-button {
-    background-color: #0a6e0a;
+  background-color: #0a6e0a;
 }

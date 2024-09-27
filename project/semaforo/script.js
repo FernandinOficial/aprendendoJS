@@ -8,12 +8,18 @@ function autoButton(){
     var yellowButton = document.getElementById('yellow-button');
     var greenButton = document.getElementById('green-button');
 
+    //display
+    var timerDisplay = document.getElementById('display');
+    timerDisplay.style.display = 'flex';
+
     //Time
     const redTime = 30000;
     const yellowTime = 5000;
     const greenTime = 20000;
 
     let indexLight = 0;  // 0: red, 1: yellow, 2: green
+    let timeRemaining = 0; // tempo restante para a luz atual
+    let timerInterval; // intervalo do temporizador
 
     function changeLight(){
         
@@ -37,28 +43,53 @@ function autoButton(){
             redLight.style.backgroundColor = '#f00';
             redButton.style.backgroundColor = '#f00';
             redButton.style.scale = '1.1';
-            setTimeout(() =>{
+            indexLight = 0;
+
+            startTimer(redTime, () => {
                 indexLight = 1;
                 changeLight();
-            }, redTime);
+            });
         }else if(indexLight === 1){
                   yellowLight.style.backgroundColor = '#ff0';
                   yellowButton.style.backgroundColor = '#ff0';
                   yellowButton.style.scale = '1.1';
-                  setTimeout(()=>{
+                  indexLight = 1;
+
+                  startTimer(yellowTime, () => {
                     indexLight = 2;
                     changeLight();
-                  }, yellowTime);
+                  });
               }
         else{
             greenLight.style.backgroundColor = '#0f0';
             greenButton.style.scale = '1.1';
             greenButton.style.backgroundColor = '#0f0';
-            setTimeout(()=>{
+            indexLight = 2;
+
+            startTimer(greenTime, () => {
                 indexLight = 0;
                 changeLight();
-            }, greenTime);
+            });
         }
+    }
+ 
+    //função do TimeDisplay
+    function startTimer(duration, callback){
+        clearInterval(timerInterval);  //limpa qualquer intervalo anterior
+        timeRemaining = duration / 1000;
+        timerDisplay.innerText = `${timeRemaining}`;
+
+        //intervalo de tempo
+        timerInterval = setInterval(() => {
+            timeRemaining--;
+            timerDisplay.innerText = `${timeRemaining}`;
+        
+            if(timeRemaining <= 0){
+                clearInterval(timerInterval);
+                callback();
+            }
+        }, 1000)
+
     }
 
     //inicia o semaforo

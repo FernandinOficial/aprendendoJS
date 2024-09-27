@@ -1,0 +1,72 @@
+* {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  font-family: sans-serif;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100dvw;
+}
+.semaforo {
+  background-color: rgb(11, 11, 11);
+  width: max-content;
+  height: max-content;
+  padding: 15px 30px 15px 30px;
+  border-radius: 50px;
+}
+.luz {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+/*Luz individual*/
+#luz-vermelha {
+  background-color: #6e0a0a; /*#f00*/
+}
+#luz-amarela {
+  background-color: #87870f; /*#ff0*/
+}
+#luz-verde {
+  background-color: #0a6e0a; /*#0f0*/
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+button {
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+}
+button:hover {
+  transition: 200ms;
+  scale: 1.1;
+}
+#auto-button {
+  background: rgb(110, 10, 10);
+  background: linear-gradient(
+    145deg,
+    rgba(110, 10, 10, 1) 0%,
+    rgba(135, 135, 15, 1) 50%,
+    rgba(10, 110, 10, 1) 100%
+  );
+}
+#red-button {
+    background-color: #6e0a0a;
+}
+#yellow-button {
+    background-color: #87870f;
+}
+#green-button {
+    background-color: #0a6e0a;
+}

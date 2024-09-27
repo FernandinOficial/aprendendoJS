@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semáforo</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="semaforo">
+        <div id="luz-container">
+          <div id="luz-vermelha" class="luz" onclick="redButton()"></div><br>
+          <div id="luz-amarela" class="luz" onclick="yellowButton()"></div><br>
+          <div id="luz-verde" class="luz" onclick="greenButton()"></div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="auto-button" onclick="autoButton()">Automático</button>
+      <button id="red-button" onclick="redButton()">Vermelho</button>
+      <button id="yellow-button" onclick="yellowButton()">Amarelo</button>
+      <button id="green-button" onclick="greenButton()">Verde</button>
+    </div>
+  </body>
+</html>

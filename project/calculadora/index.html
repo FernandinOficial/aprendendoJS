@@ -9,31 +9,34 @@
   </head>
   <body>
     <div class="calculadora">
-      <div class="display"></div>
+      <div class="display">
+        <p id="current-value">909</p>
+        <h1 id="input-value">|</h1>
+      </div>
       <div class="buttons">
         <button onclick="clearDisplay()" class="bg-gray">C</button>
-        <button class="bg-gray">±</button>
-        <button class="bg-gray">%</button>
-        <button class="bg-orange">÷</button>
+        <button class="bg-gray operator">±</button>
+        <button onclick="operator('%')" class="bg-gray operator">%</button>
+        <button onclick="operator('/')" class="bg-orange operator">÷</button>
 
-        <button class="bg-light-gray">7</button>
-        <button class="bg-light-gray">8</button>
-        <button class="bg-light-gray">9</button>
-        <button class="bg-orange">x</button>
+        <button onclick="numberSeven()" class="bg-light-gray">7</button>
+        <button onclick="numberEight()" class="bg-light-gray">8</button>
+        <button onclick="numberNine()" class="bg-light-gray">9</button>
+        <button onclick="operator('x')" class="bg-orange operator">x</button>
 
-        <button class="bg-light-gray">4</button>
-        <button class="bg-light-gray">5</button>
-        <button class="bg-light-gray">6</button>
-        <button class="bg-orange">-</button>
+        <button onclick="numberFour()" class="bg-light-gray">4</button>
+        <button onclick="numberFive()" class="bg-light-gray">5</button>
+        <button onclick="numberSix()" class="bg-light-gray">6</button>
+        <button onclick="operator('-')" class="bg-orange operator">-</button>
 
-        <button class="bg-light-gray">1</button>
-        <button class="bg-light-gray">2</button>
-        <button class="bg-light-gray">3</button>
-        <button class="bg-orange">+</button>
+        <button onclick="numberOne()" class="bg-light-gray">1</button>
+        <button onclick="numberTwo()" class="bg-light-gray">2</button>
+        <button onclick="numberThree()" class="bg-light-gray">3</button>
+        <button onclick="operator('+')" class="bg-orange operator">+</button>
 
         <button class="bg-light-gray button-zero">0</button>
         <button class="bg-light-gray">,</button>
-        <button class="bg-green">=</button>
+        <button onclick="result()" class="bg-green">=</button>
       </div>
     </div>
   </body>
